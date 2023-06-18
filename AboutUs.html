@@ -4,7 +4,6 @@
     <title>About Us</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS CSS -->
     <style>
-        /* Include the custom font */
         @font-face {
             font-family: 'Nordique Pro Cyrillic SemiBold';
             src: url('NordiquePro-Semibold.woff2') format('woff2'),
@@ -15,14 +14,13 @@
         }
 
         body {
-            font-family: 'Nordique Pro Cyrillic SemiBold', sans-serif; /* Applied the custom font here */
+            font-family: 'Nordique Pro Cyrillic SemiBold', sans-serif;
             color: #000;
             margin: 0;
             background: #fff;
             padding: 20px;
         }
 
-        /* Navigation bar styles */
         .navbar {
             display: flex;
             justify-content: space-around;
@@ -33,7 +31,6 @@
             font-family: 'Nordique Pro Cyrillic SemiBold', sans-serif;
         }
 
-        /* Navigation links styles */
         .navbar a {
             color: #000;
             text-decoration: none;
@@ -41,7 +38,6 @@
             font-size: 20px;
         }
 
-        /* Demo button styles */
         .navbar .demo-btn {
             color: #fff;
             background-color: #000;
@@ -63,6 +59,15 @@
 
         .block h2, .block p {
             margin: 0;
+        }
+
+        /* Add some margin to paragraphs for space */
+        .block p {
+            margin-bottom: 20px;
+        }
+
+        .block p::first-letter {
+            font-weight: bold;
         }
 
         .team-member {
