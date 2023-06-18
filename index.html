@@ -11,7 +11,8 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background: #000; /* Background color changed to black for contrast */
+            background: #fff; /* Background color changed to white */
+            color: #000; /* Text color changed to black */
         }
         /* This makes the video take up the full width of the page */
         video {
@@ -27,38 +28,30 @@
             font-style: normal;
             font-display: swap;
         }
-        h1 {
-            font-family: 'Nordique Pro Cyrillic SemiBold', sans-serif;
-            color: #fff; /* Change color to white for contrast */
-            padding: 20px;
-            font-size: 60px; /* Increase the size of the text for prominence */
-            text-shadow: 2px 2px 4px #000000; /* Shadow effect for text */
-        }
-        /* Add a slight animation to the h1 tag */
-        h1 {
-            animation: fadeIn 2s;
-        }
-        /* Define the fadeIn animation */
-        @keyframes fadeIn {
-            0% {opacity: 0;}
-            100% {opacity: 1;}
-        }
         /* Navigation bar styles */
         .navbar {
             position: fixed;
-            top: 0;
+            top: 0; 
             width: 100%;
             display: flex;
             justify-content: space-around;
-            background-color: #000;
-            color: #fff;
-            padding: 10px 0;
+            align-items: center;
+            background-color: #fff; /* Background color changed to white */
+            color: #000; /* Text color changed to black */
+            padding: 20px;
+            font-family: 'Nordique Pro Cyrillic SemiBold', sans-serif;
         }
         /* Navigation links styles */
         .navbar a {
-            color: #fff;
+            color: #000;
             text-decoration: none;
+            padding: 10px;
             font-size: 20px;
+        }
+        /* Title styles */
+        .navbar h1 {
+            margin: 0;
+            font-size: 32px;
         }
     </style>
 </head>
@@ -67,16 +60,13 @@
     <div class="navbar">
         <a href="#">Contact Us</a>
         <a href="#">Services</a>
+        <h1>Under Construction</h1>
         <a href="#">About Us</a>
         <a href="#">Testimonials</a>
-        <a href="#">FAQs</a>
-        <a href="#">Our Team</a>
     </div>
-    <h1>Under Construction</h1>
     <video autoplay loop muted>
         <source src="Untitled-6.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </body>
 </html>
-
