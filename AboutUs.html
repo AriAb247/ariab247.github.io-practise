@@ -68,6 +68,11 @@
         .team-member {
             display: flex;
             align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .team-member:nth-child(even) {
+            flex-direction: row-reverse;
         }
 
         .team-member img {
@@ -75,7 +80,7 @@
             height: 150px;
             object-fit: cover;
             border-radius: 50%;
-            margin-right: 20px;
+            margin: 0 20px;
         }
     </style>
 </head>
@@ -94,24 +99,24 @@
     <div class="content">
         <h1>About Us</h1>
         <!-- Mission Statement -->
-        <div class="block" data-aos="fade-in" data-aos-duration="1000">
+        <div class="block" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="200">
             <h2>Mission Statement</h2>
             <p>Your mission statement goes here.</p>
         </div>
         <!-- Team -->
-        <div class="block" data-aos="fade-up" data-aos-duration="1000">
+        <div class="block" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="200">
             <h2>Our Team</h2>
             <!-- Team Member 1 -->
-            <div class="team-member" data-aos="fade-right" data-aos-duration="1000">
-                <img src="path_to_your_image" alt="Your Name"> <!-- Replace with your image path -->
+            <div class="team-member" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200">
+                <img src="path_to_your_image" alt="Your Name">
                 <div>
                     <h3>Your Name - Founder & Managing Director</h3>
                     <p>Your bio goes here.</p>
                 </div>
             </div>
             <!-- Team Member 2 -->
-            <div class="team-member" data-aos="fade-left" data-aos-duration="1000">
-                <img src="path_to_your_friend's_image" alt="Your Friend's Name"> <!-- Replace with your friend's image path -->
+            <div class="team-member" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200">
+                <img src="path_to_your_friend's_image" alt="Your Friend's Name">
                 <div>
                     <h3>Your Friend's Name - Investor & Strategic Advisor</h3>
                     <p>Your friend's bio goes here.</p>
