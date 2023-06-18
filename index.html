@@ -48,10 +48,23 @@
             padding: 10px;
             font-size: 20px;
         }
-        /* Title styles */
-        .navbar h1 {
-            margin: 0;
-            font-size: 32px;
+        /* Button Styles */
+        .navbar .demo-button {
+            background-color: #000; /* Button color changed to black */
+            color: #fff; /* Button text color changed to white */
+            border: none; 
+            border-radius: 20px; 
+            padding: 10px 20px; 
+            text-align: center; 
+            text-decoration: none; 
+            display: inline-block; 
+            font-size: 16px; 
+            transition-duration: 0.4s; /* Added a transition for a smooth hover effect */
+        }
+        /* Button Hover Effect */
+        .navbar .demo-button:hover {
+            background-color: #555; /* Button color changes on hover */
+            color: #fff;
         }
     </style>
 </head>
@@ -63,7 +76,7 @@
         <a href="#">Funding</a>
         <a href="#">Join Us</a>
         <a href="#">Contact Us</a>
-        <a href="#">Request a Demo</a>
+        <a href="#" class="demo-button">Request a Demo</a>
     </div>
     <video autoplay loop muted>
         <source src="Untitled-6.mp4" type="video/mp4">
