@@ -4,52 +4,125 @@
     <title>About Us</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS CSS -->
     <style>
+        /* Include the custom font */
+        @font-face {
+            font-family: 'Nordique Pro Cyrillic SemiBold';
+            src: url('NordiquePro-Semibold.woff2') format('woff2'),
+                 url('NordiquePro-Semibold.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+
         body {
-            font-family: 'Nordique Pro Cyrillic SemiBold', sans-serif;
+            font-family: 'Nordique Pro Cyrillic SemiBold', sans-serif; /* Applied the custom font here */
             color: #000;
             margin: 0;
             background: #fff;
             padding: 20px;
         }
+
+        /* Navigation bar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #fff;
+            color: #000;
+            padding: 20px;
+            font-family: 'Nordique Pro Cyrillic SemiBold', sans-serif;
+        }
+
+        /* Navigation links styles */
+        .navbar a {
+            color: #000;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        /* Demo button styles */
+        .navbar .demo-btn {
+            color: #fff;
+            background-color: #000;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
         .content {
             max-width: 800px;
             margin: 0 auto;
         }
-        .team-member {
+
+        .block {
             margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #000;
+            border-radius: 8px;
         }
-        .team-member h2, .team-member p {
+
+        .block h2, .block p {
             margin: 0;
+        }
+
+        .team-member {
+            display: flex;
+            align-items: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 20px;
         }
     </style>
 </head>
 <body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="concept.html">Concept</a>
+        <a href="funding.html">Funding</a>
+        <a href="join.html">Join Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="demo.html" class="demo-btn">Request a Demo</a>
+    </div>
+
     <div class="content">
         <h1>About Us</h1>
         <!-- Mission Statement -->
-        <div class="mission-statement" data-aos="fade-up" data-aos-duration="1000">
+        <div class="block" data-aos="fade-in" data-aos-duration="1000">
             <h2>Mission Statement</h2>
             <p>Your mission statement goes here.</p>
         </div>
         <!-- Team -->
-        <div class="team">
+        <div class="block" data-aos="fade-up" data-aos-duration="1000">
             <h2>Our Team</h2>
             <!-- Team Member 1 -->
-            <div class="team-member" data-aos="fade-up" data-aos-duration="1000">
-                <h3>Your Name - Founder & Managing Director</h3>
-                <p>Your bio goes here.</p>
+            <div class="team-member" data-aos="fade-right" data-aos-duration="1000">
+                <img src="path_to_your_image" alt="Your Name"> <!-- Replace with your image path -->
+                <div>
+                    <h3>Your Name - Founder & Managing Director</h3>
+                    <p>Your bio goes here.</p>
+                </div>
             </div>
             <!-- Team Member 2 -->
-            <div class="team-member" data-aos="fade-up" data-aos-duration="1000">
-                <h3>Your Friend's Name - Investor & Strategic Advisor</h3>
-                <p>Your friend's bio goes here.</p>
+            <div class="team-member" data-aos="fade-left" data-aos-duration="1000">
+                <img src="path_to_your_friend's_image" alt="Your Friend's Name"> <!-- Replace with your friend's image path -->
+                <div>
+                    <h3>Your Friend's Name - Investor & Strategic Advisor</h3>
+                    <p>Your friend's bio goes here.</p>
+                </div>
             </div>
         </div>
     </div>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- AOS JavaScript -->
     <script>
       AOS.init();  // Initialize AOS
     </script>
 </body>
 </html>
-
