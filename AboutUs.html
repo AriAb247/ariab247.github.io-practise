@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>About Us</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS CSS -->
     <style>
         @font-face {
             font-family: 'Nordique Pro Cyrillic SemiBold';
@@ -19,9 +18,8 @@
             margin: 0;
             background: #fff;
             padding: 20px;
-            /* Add this line to disable ligatures */
-        -webkit-font-feature-settings: "liga" 0, "clig" 0;
-        font-feature-settings: "liga" 0, "clig" 0;
+            -webkit-font-feature-settings: "liga" 0, "clig" 0;
+            font-feature-settings: "liga" 0, "clig" 0;
         }
 
         .navbar {
@@ -54,6 +52,8 @@
         }
 
         .block {
+            position: relative;
+            overflow: hidden;
             margin-bottom: 40px;
             padding: 20px;
             border: 1px solid #000;
@@ -90,10 +90,26 @@
             border-radius: 50%;
             margin: 0 20px;
         }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fadeInUp {
+            animation-name: fadeInUp;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation bar -->
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
@@ -105,29 +121,27 @@
     </div>
 
     <div class="content">
-        <h1>About Us</h1>
-        <!-- Mission Statement -->
-        <div class="block" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="200">
-            <h2>Mission Statement</h2>
-            <p data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200">Altum Medical Ltd. is dedicated to reshaping the future of healthcare by integrating innovative technology with traditional medical infrastructure. Our immediate mission is to enhance patient safety and increase service efficiency within the NHS and beyond, through the development of a novel device such as our handheld bedside blood labelling device, that automates much of the pre-analytical phase of blood sampling. Designed to reduce labelling errors, it the initial step towards our broader vision.</p>
-            <br>
-            <p data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400">Ultimately, our aspiration is to cultivate a holistic healthcare ecosystem that harmonises seamlessly with the NHS, fusing public health values with the dynamism and efficacy of private enterprise. We envision administering a network of GP clinics, hospitals, pharmacies, surgeries and others, providing a comprehensive range of healthcare services. This expansive infrastructure will generate a wealth of data, which we will leverage to consistently refine our services and propel healthcare advancements.</p>
-            <br>
-            <p data-aos="fade-in" data-aos-duration="1000" data-aos-delay="600">Unlike traditional healthcare companies, our solutions are uniquely tailored, harnessing the potential of modern technology to meet the intricate needs of today's healthcare industry. Our blend of medical knowledge, technological prowess, and a passion for improving patient outcomes set us apart, making us not just a healthcare company, but a pioneer in the new era of health-tech. We do not want to simply follow the current path of healthcare, but to innovate, advance and ultimately, reshape its future for the betterment of all.</p>
+        <h1 class="fadeInUp">About Us</h1>
+
+        <div class="block">
+            <h2 class="fadeInUp">Mission Statement</h2>
+            <p class="fadeInUp">Altum Medical Ltd. is dedicated to reshaping the future of healthcare by integrating innovative technology with traditional medical infrastructure. Our immediate mission is to enhance patient safety and increase service efficiency within the NHS and beyond, through the development of a novel device such as our handheld bedside blood labelling device, that automates much of the pre-analytical phase of blood sampling. Designed to reduce labelling errors, it the initial step towards our broader vision.</p>
+            <p class="fadeInUp">Ultimately, our aspiration is to cultivate a holistic healthcare ecosystem that harmonises seamlessly with the NHS, fusing public health values with the dynamism and efficacy of private enterprise. We envision administering a network of GP clinics, hospitals, pharmacies, surgeries and others, providing a comprehensive range of healthcare services. This expansive infrastructure will generate a wealth of data, which we will leverage to consistently refine our services and propel healthcare advancements.</p>
+            <p class="fadeInUp">Unlike traditional healthcare companies, our solutions are uniquely tailored, harnessing the potential of modern technology to meet the intricate needs of today's healthcare industry. Our blend of medical knowledge, technological prowess, and a passion for improving patient outcomes set us apart, making us not just a healthcare company, but a pioneer in the new era of health-tech. We do not want to simply follow the current path of healthcare, but to innovate, advance and ultimately, reshape its future for the betterment of all.</p>
         </div>
-        <!-- Team -->
-        <div class="block" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="200">
-            <h2>Our Team</h2>
-            <!-- Team Member 1 -->
-            <div class="team-member" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200">
+
+        <div class="block">
+            <h2 class="fadeInUp">Our Team</h2>
+
+            <div class="team-member fadeInUp">
                 <img src="Arya.png" alt="Your Name">
                 <div>
                     <p><font size="5">Arya Abaee - Founder & Managing Director</font></p>
                     <p>As the founder of Altum Medical Ltd., Arya Abaee is the innovative force behind our novel medical device concepts. His understanding of the healthcare system's inner workings came through his placements at prestigious London hospitals like King's College Hospital and St. Thomas' during his medical degree. These experiences fostered a unique perspective, enabling him to identify inefficiencies and drive opportunities for improvement. Equipped with an MSc in Clinical Neuroscience from UCL and actively engaged in clinical research, particularly in integrating technology into healthcare, Arya provides the leadership and vision that are vital to our enterprise. His unwavering commitment and dedication to improvement form the cornerstone of our mission at Altum Medical Ltd.</p>
                 </div>
             </div>
-            <!-- Team Member 2 -->
-            <div class="team-member" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200">
+
+            <div class="team-member fadeInUp">
                 <img src="runi.jpg" alt="Your Friend's Name">
                 <div>
                     <p><font size="5">Runi H. Øregaard - Strategic Advisor & Investor</font></p>
@@ -136,10 +150,5 @@
             </div>
         </div>
     </div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- AOS JavaScript -->
-    <script>
-      AOS.init();  // Initialize AOS
-    </script>
 </body>
 </html>
