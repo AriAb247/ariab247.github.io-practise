@@ -18,6 +18,8 @@
         video {
             width: 100%;
             height: auto;
+            opacity: 1;
+            transition: opacity 0.5s;
         }
         /* Include the custom font */
         @font-face {
@@ -66,21 +68,49 @@
             background-color: #555; /* Button color changes on hover */
             color: #fff;
         }
+        /* Timeline Section */
+        #timeline {
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+        }
+        /* Timeline Line */
+        #line {
+          width: 2px;
+          background-color: black;
+          height: 0;
+          transition: height 0.5s;
+        }
     </style>
 </head>
 <body>
     <!-- Navigation bar -->
     <div class="navbar">
-        <a href="AboutUs.html">About Us</a>
-        <a href="#">Concept</a>
-        <a href="#">Funding</a>
-        <a href="#">Join Us</a>
-        <a href="#">Contact Us</a>
+        <a href="#AboutUs">About Us</a>
+        <a href="#Concept">Concept</a>
+        <a href="#Funding">Funding</a>
+        <a href="#JoinUs">Join Us</a>
+        <a href="#ContactUs">Contact Us</a>
         <a href="#" class="demo-button">Request a Demo</a>
     </div>
-    <video autoplay loop muted>
+    <video id="homeVideo" autoplay loop muted>
         <source src="Untitled-6.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    <!-- Timeline Section -->
+    <section id="timeline">
+      <div id="line"></div>
+    </section>
+    <script>
+    window.addEventListener("scroll", function() {
+      var scrollHeight = window.document.body.scrollHeight;
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var clientHeight = document.documentElement.clientHeight;
+      var scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
+      document.getElementById('line').style.height = Math.min(scrolled * 2, 50) + '%';
+      document.getElementById('homeVideo').style.opacity = Math.max(1 - scrolled / 100, 0);
+    });
+    </script>
 </body>
 </html>
