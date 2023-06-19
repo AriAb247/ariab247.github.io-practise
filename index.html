@@ -82,6 +82,13 @@
           height: 0;
           transition: height 0.5s;
         }
+        /* Extra sections for scrolling */
+        .extra-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -94,13 +101,36 @@
         <a href="#ContactUs">Contact Us</a>
         <a href="#" class="demo-button">Request a Demo</a>
     </div>
-    <video id="homeVideo" autoplay loop muted>
-        <source src="Untitled-6.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <!-- Home Section -->
+    <section id="Home">
+        <video id="homeVideo" autoplay loop muted>
+            <source src="Untitled-6.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
     <!-- Timeline Section -->
     <section id="timeline">
       <div id="line"></div>
+    </section>
+    <!-- About Us Section -->
+    <section id="AboutUs" class="extra-section">
+        <h2>About Us</h2>
+    </section>
+    <!-- Concept Section -->
+    <section id="Concept" class="extra-section">
+        <h2>Concept</h2>
+    </section>
+    <!-- Funding Section -->
+    <section id="Funding" class="extra-section">
+        <h2>Funding</h2>
+    </section>
+    <!-- Join Us Section -->
+    <section id="JoinUs" class="extra-section">
+        <h2>Join Us</h2>
+    </section>
+    <!-- Contact Us Section -->
+    <section id="ContactUs" class="extra-section">
+        <h2>Contact Us</h2>
     </section>
     <script>
     window.addEventListener("scroll", function() {
