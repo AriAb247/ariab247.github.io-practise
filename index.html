@@ -73,13 +73,16 @@
           height: 100vh;
           display: flex;
           justify-content: center;
-          align-items: flex-end;
+          align-items: center;
+          position: relative;
         }
         /* Timeline Line */
         #line {
           width: 2px;
           background-color: black;
           height: 0;
+          position: absolute;
+          bottom: 50%;
           transition: height 0.5s;
         }
         /* Extra sections for scrolling */
@@ -138,7 +141,7 @@
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       var clientHeight = document.documentElement.clientHeight;
       var scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
-      document.getElementById('line').style.height = Math.min(scrolled * 2, 50) + '%';
+      document.getElementById('line').style.height = Math.min(scrolled * 2, 100) + '%';
       document.getElementById('homeVideo').style.opacity = Math.max(1 - scrolled / 100, 0);
     });
     </script>
